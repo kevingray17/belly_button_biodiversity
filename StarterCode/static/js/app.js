@@ -43,3 +43,8 @@ function init() {
 
      // Format OTU ID string
     let otuidslist = otuids.map(otuid => 'OTU ' + otuid);
+
+    // Reverse arrays to meet plotly standards
+    sampvalues = sampvalues.reverse();
+    otuidslist = otuidslist.reverse();
+    otulabels = otulabels.reverse();
