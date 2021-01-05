@@ -29,8 +29,8 @@ function init() {
       option.attr("value",namevalue);
     });
 
-    // Build arrays for the primary axes and labels for the bar plot.
-    // [0] is used because on init() the first subject ID is 0 
+    // Create arrays for the bar chart's primary axes and labels 
+
     let sampvalues = justsamples[0].sample_values;
     let otuids = justsamples[0].otu_ids;
     let otulabels = justsamples[0].otu_labels;
