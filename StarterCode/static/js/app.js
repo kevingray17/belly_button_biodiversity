@@ -40,3 +40,6 @@ function init() {
      sampvalues = sampvalues.slice(0, 10);
      otuids = otuids.slice(0, 10);
      otulabels = otulabels.slice(0,10);
+
+     // Format OTU ID string
+    let otuidslist = otuids.map(otuid => 'OTU ' + otuid);
