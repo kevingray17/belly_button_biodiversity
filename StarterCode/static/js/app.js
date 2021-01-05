@@ -70,4 +70,18 @@ title: "Top 10 OTUs Present in Individual Belly Buttons"
 
 Plotly.newPlot(CHART, chartData, layout);
 
+// Bubble Chart Code
+
+var trace1 = {
+    x: samples[0].otu_ids,
+    y: samples[0].sample_values,
+    text: samples[0].otu_labels,
+    mode: 'markers',
+    marker: {
+        size: samples[0].sample_values,
+        color: samples[0].otu_ids,
+        colorscale: [[0, 'rgb(0,0,225)'],[1, 'rgb(255,0,0)']]
+    }
+};
+
 
