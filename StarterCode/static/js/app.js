@@ -30,8 +30,13 @@ function init() {
     });
 
     // Create arrays for the bar chart's primary axes and labels
-    //[0] is used b/c the first subject ID is 0
+    // [0] is used b/c the first subject ID is 0
 
     let sampvalues = justsamples[0].sample_values;
     let otuids = justsamples[0].otu_ids;
     let otulabels = justsamples[0].otu_labels;
+
+    // Select the first 10 objects for plotting on the bar chart 
+     sampvalues = sampvalues.slice(0, 10);
+     otuids = otuids.slice(0, 10);
+     otulabels = otulabels.slice(0,10);
