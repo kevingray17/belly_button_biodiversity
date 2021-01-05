@@ -48,3 +48,12 @@ function init() {
     sampvalues = sampvalues.reverse();
     otuidslist = otuidslist.reverse();
     otulabels = otulabels.reverse();
+
+    // Trace for the the bar chart
+    var trace = {
+        x: sampvalues,
+        y: otuidslist,
+        text: otulabels,
+        type: "bar",
+        orientation: "h"
+  };
