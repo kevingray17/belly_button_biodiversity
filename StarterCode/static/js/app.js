@@ -1,10 +1,4 @@
-// ***********************************************************************
-// This program is included as a script in index.html and provides the necessary 
-// functionality to load and plot data from a JSON file samples.json that includes
-// research data on bacteria growth in human navels. 
-// Program developed and tested by : Paul Hardy
-// Program developed and tested on : 10-07-2020
-// ************************************************************************
+// Bar Chart Code
 
 function init() {
   
