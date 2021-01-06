@@ -62,7 +62,7 @@ function init() {
   
     // // Apply the group bar mode to the layout
     var layout = {
-      title: "Top 10 OTUs found in the individual subject"
+      title: "Top 10 OTUs Present in the Individual Subject"
     };
   
     // Render the plot to the div tag with id "bar"
