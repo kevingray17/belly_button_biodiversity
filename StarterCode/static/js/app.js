@@ -104,7 +104,7 @@ var data = [trace1];
   
    //***********************************************
    // Plot the Belly button washing Gauge chart 
-   //***********************************************
+  
      initGaugeChart();
   });
 };  
