@@ -16,7 +16,7 @@ function init() {
       samples = data.samples;
   
     // Grab the "metadata" from the data set
-      justmetadata = data.metadata;
+      metadata = data.metadata;
   
     // Pre-Populate data into the Test Subject ID select dropdown list
     // Select the d3 input element for the dropdown
@@ -94,13 +94,13 @@ function init() {
     //*************************************
     // Populate the Demographic Data panel
     //*************************************
-      d3.select("#sample-metadata").append("p").text('ID: '+ justmetadata[0].id);
-      d3.select("#sample-metadata").append("p").text('Ethnicity: '+ justmetadata[0].ethnicity);
-      d3.select("#sample-metadata").append("p").text('Gender: '+ justmetadata[0].gender);
-      d3.select("#sample-metadata").append("p").text('Age: '+ justmetadata[0].age);
-      d3.select("#sample-metadata").append("p").text('Location: '+ justmetadata[0].location);
-      d3.select("#sample-metadata").append("p").text('Bbtype: '+ justmetadata[0].bbtype);
-      d3.select("#sample-metadata").append("p").text('Wfreq: '+ justmetadata[0].wfreq);
+      d3.select("#sample-metadata").append("p").text('ID: '+ metadata[0].id);
+      d3.select("#sample-metadata").append("p").text('Ethnicity: '+ metadata[0].ethnicity);
+      d3.select("#sample-metadata").append("p").text('Gender: '+ metadata[0].gender);
+      d3.select("#sample-metadata").append("p").text('Age: '+ metadata[0].age);
+      d3.select("#sample-metadata").append("p").text('Location: '+ metadata[0].location);
+      d3.select("#sample-metadata").append("p").text('Bbtype: '+ metadata[0].bbtype);
+      d3.select("#sample-metadata").append("p").text('Wfreq: '+ metadata[0].wfreq);
     
      //***********************************************
      // Plot the Belly button washing Gauge chart 
@@ -190,13 +190,13 @@ function init() {
   
       d3.select("#sample-metadata").selectAll('p').remove();
   
-      d3.select("#sample-metadata").append("p").text('ID: '+ justmetadata[subjectindex].id);
-      d3.select("#sample-metadata").append("p").text('Ethnicity: '+ justmetadata[subjectindex].ethnicity);
-      d3.select("#sample-metadata").append("p").text('Gender: '+ justmetadata[subjectindex].gender);
-      d3.select("#sample-metadata").append("p").text('Age: '+ justmetadata[subjectindex].age);
-      d3.select("#sample-metadata").append("p").text('Location: '+ justmetadata[subjectindex].location);
-      d3.select("#sample-metadata").append("p").text('Bbtype: '+ justmetadata[subjectindex].bbtype);
-      d3.select("#sample-metadata").append("p").text('Wfreq: '+ justmetadata[subjectindex].wfreq);
+      d3.select("#sample-metadata").append("p").text('ID: '+ metadata[subjectindex].id);
+      d3.select("#sample-metadata").append("p").text('Ethnicity: '+ metadata[subjectindex].ethnicity);
+      d3.select("#sample-metadata").append("p").text('Gender: '+ metadata[subjectindex].gender);
+      d3.select("#sample-metadata").append("p").text('Age: '+ metadata[subjectindex].age);
+      d3.select("#sample-metadata").append("p").text('Location: '+ metadata[subjectindex].location);
+      d3.select("#sample-metadata").append("p").text('Bbtype: '+ metadata[subjectindex].bbtype);
+      d3.select("#sample-metadata").append("p").text('Wfreq: '+ metadata[subjectindex].wfreq);
   
      //*******************************************************************
      // Call function to restyle Belly button washing Gauge chart restyle
