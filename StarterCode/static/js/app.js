@@ -30,12 +30,12 @@ function init() {
       });
   
     // Build arrays for the primary axes and labels for the bar plot.
-    // [0] is used because on init() the first subject ID is 0 
+    
       let sampvalues = samples[0].sample_values;
       let otuids = samples[0].otu_ids;
       let otulabels = samples[0].otu_labels;
     
-    // Slice the first 10 objects for plotting - bar chart requirement
+    // Slice the first 10 objects for plotting on bar chart
       sampvalues = sampvalues.slice(0, 10);
       otuids = otuids.slice(0, 10);
       otulabels = otulabels.slice(0,10);
@@ -68,9 +68,8 @@ function init() {
     // Render the plot to the div tag with id "bar"
     Plotly.newPlot(CHART, chartData, layout);
     
-    //***********************************
-    // Plot the Bubble chart  
-    //***********************************
+    // Bubble Chart Code
+    
     var trace1 = {
       x: samples[0].otu_ids,
       y: samples[0].sample_values,
