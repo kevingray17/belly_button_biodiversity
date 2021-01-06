@@ -9,20 +9,20 @@ function init() {
       d3.json("samples.json").then(importedData => {
       var data = importedData;
   
-    // Get just the "testsubject ids" from the data set
+    // Grab the "testsubject ids" from the data 
       testsubjects = data.names;
   
-    // Get just the "samples" from the data set
-      justsamples = data.samples;
+    // Grab the "samples" from the data set
+      samples = data.samples;
   
-    // Get just the "metadata" from the data set
+    // Grab the "metadata" from the data set
       justmetadata = data.metadata;
   
     // Pre-Populate data into the Test Subject ID select dropdown list
     // Select the d3 input element for the dropdown
       const subjectselect = d3.select("#selDataset");
   
-    // Build the Test Subject ID drop down list
+    // Create the Test Subject ID dropdown
       testsubjects.forEach(namevalue =>{
         var option = subjectselect.append("option");
         option.text(namevalue);
@@ -31,9 +31,9 @@ function init() {
   
     // Build arrays for the primary axes and labels for the bar plot.
     // [0] is used because on init() the first subject ID is 0 
-      let sampvalues = justsamples[0].sample_values;
-      let otuids = justsamples[0].otu_ids;
-      let otulabels = justsamples[0].otu_labels;
+      let sampvalues = samples[0].sample_values;
+      let otuids = samples[0].otu_ids;
+      let otulabels = samples[0].otu_labels;
     
     // Slice the first 10 objects for plotting - bar chart requirement
       sampvalues = sampvalues.slice(0, 10);
@@ -72,13 +72,13 @@ function init() {
     // Plot the Bubble chart  
     //***********************************
     var trace1 = {
-      x: justsamples[0].otu_ids,
-      y: justsamples[0].sample_values,
-      text: justsamples[0].otu_labels,
+      x: samples[0].otu_ids,
+      y: samples[0].sample_values,
+      text: samples[0].otu_labels,
       mode: 'markers',
       marker: {
-        size: justsamples[0].sample_values,
-        color: justsamples[0].otu_ids,
+        size: samples[0].sample_values,
+        color: samples[0].otu_ids,
         colorscale: [[0,'rgb(0,0,255)'],[1,'rgb(255,0,0)']]
       }
     };
@@ -133,9 +133,9 @@ function init() {
       let subjectindex = testsubjects.indexOf(dataset);
     
     // Build arrays for the primary axes and labels for the bar plot.
-      let sampvalues = justsamples[subjectindex].sample_values;
-      let otuids = justsamples[subjectindex].otu_ids;
-      let otulabels = justsamples[subjectindex].otu_labels;
+      let sampvalues = samples[subjectindex].sample_values;
+      let otuids = samples[subjectindex].otu_ids;
+      let otulabels = samples[subjectindex].otu_labels;
   
     // Slice the first 10 objects for plotting - bar chart requirement
       sampvalues = sampvalues.slice(0, 10);
@@ -166,13 +166,13 @@ function init() {
     // Re-Plot the Bubble chart  
     //***********************************
       var trace1 = {
-        x: justsamples[subjectindex].otu_ids,
-        y: justsamples[subjectindex].sample_values,
-        text: justsamples[subjectindex].otu_labels,
+        x: samples[subjectindex].otu_ids,
+        y: samples[subjectindex].sample_values,
+        text: samples[subjectindex].otu_labels,
         mode: 'markers',
         marker: {
-          size: justsamples[subjectindex].sample_values,
-          color: justsamples[subjectindex].otu_ids,
+          size: samples[subjectindex].sample_values,
+          color: samples[subjectindex].otu_ids,
           colorscale: [[0,'rgb(0,0,255)'],[1,'rgb(255,0,0)']]
         }
       };
