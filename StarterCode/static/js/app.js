@@ -83,5 +83,31 @@ var trace1 = {
         colorscale: [[0, 'rgb(0,0,225)'],[1, 'rgb(255,0,0)']]
     }
 };
+var data = [trace1];
+  
+  var layout = {
+    title: 'All samples taken for the individual subject',
+    showlegend: false
+  };
+    Plotly.newPlot('bubble', data, layout);
+
+  
+  // Populate the Demographic Data panel
+
+    d3.select("#sample-metadata").append("p").text('ID: '+ justmetadata[0].id);
+    d3.select("#sample-metadata").append("p").text('Ethnicity: '+ justmetadata[0].ethnicity);
+    d3.select("#sample-metadata").append("p").text('Gender: '+ justmetadata[0].gender);
+    d3.select("#sample-metadata").append("p").text('Age: '+ justmetadata[0].age);
+    d3.select("#sample-metadata").append("p").text('Location: '+ justmetadata[0].location);
+    d3.select("#sample-metadata").append("p").text('Bbtype: '+ justmetadata[0].bbtype);
+    d3.select("#sample-metadata").append("p").text('Wfreq: '+ justmetadata[0].wfreq);
+  
+   //***********************************************
+   // Plot the Belly button washing Gauge chart 
+   //***********************************************
+     initGaugeChart();
+  });
+};  
+// End of init() function
 
 
