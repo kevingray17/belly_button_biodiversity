@@ -124,8 +124,7 @@ function init() {
     var dataset = subjectselect.node().value;
       
     // Find the index of the subject in the testsubjects array
-    // This is necessary to find all of the dependant data for the 
-    // selected subject
+
       let subjectindex = testsubjects.indexOf(dataset);
     
     // Build arrays for the primary axes and labels for the bar plot.
@@ -194,9 +193,9 @@ function init() {
       d3.select("#sample-metadata").append("p").text('Bbtype: '+ metadata[subjectindex].bbtype);
       d3.select("#sample-metadata").append("p").text('Wfreq: '+ metadata[subjectindex].wfreq);
   
-     //*******************************************************************
+     
      // Call function to restyle Belly button washing Gauge chart restyle
-     //*******************************************************************
+
   
       restyleGaugeChart(subjectindex);
   }
