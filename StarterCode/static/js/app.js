@@ -102,7 +102,7 @@ var data = [trace1];
     d3.select("#sample-metadata").append("p").text('Bbtype: '+ justmetadata[0].bbtype);
     d3.select("#sample-metadata").append("p").text('Wfreq: '+ justmetadata[0].wfreq);
   
-   //***********************************************
+
    // Plot the Belly button washing Gauge chart 
   
      initGaugeChart();
