@@ -150,16 +150,15 @@ function init() {
       y = otuidslist;
       text = otulabels;
   
-    //***********************************
+   
     // Re-style the Bar chart  
-    //***********************************
+    
       Plotly.restyle(CHART, "x", [x]);
       Plotly.restyle(CHART, "y", [y]);
       Plotly.restyle(CHART, "text", [text]);
   
-    //***********************************
+    
     // Re-Plot the Bubble chart  
-    //***********************************
       var trace1 = {
         x: samples[subjectindex].otu_ids,
         y: samples[subjectindex].sample_values,
@@ -168,7 +167,7 @@ function init() {
         marker: {
           size: samples[subjectindex].sample_values,
           color: samples[subjectindex].otu_ids,
-          colorscale: [[0,'rgb(0,0,255)'],[1,'rgb(255,0,0)']]
+          colorscale: [[0,'rgb(0,0,2)'],[1,'rgb(255,0,0)']]
         }
       };
       
