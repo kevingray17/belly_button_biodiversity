@@ -1,16 +1,16 @@
-// Bar Chart Code
+    // Bar Chart Code
 
 function init() {
   
-    // Variable to select the location of the bar chart from index.html
+    // Create variable setting bar chart's location in html file
     var CHART = d3.selectAll("#bar").node();
   
-    // Use D3 fetch to read the JSON file into importedData as the argument.
+    // Fetch data in the json
       d3.json("samples.json").then(importedData => {
       var data = importedData;
   
     // Get just the "testsubject ids" from the data set
-      justtestsubjects = data.names;
+      testsubjects = data.names;
   
     // Get just the "samples" from the data set
       justsamples = data.samples;
@@ -23,7 +23,7 @@ function init() {
       const subjectselect = d3.select("#selDataset");
   
     // Build the Test Subject ID drop down list
-      justtestsubjects.forEach(namevalue =>{
+      testsubjects.forEach(namevalue =>{
         var option = subjectselect.append("option");
         option.text(namevalue);
         option.attr("value",namevalue);
@@ -127,10 +127,10 @@ function init() {
     // Assign the value of the dropdown menu option to a variable
     var dataset = subjectselect.node().value;
       
-    // Find the index of the subject in the justtestsubjects array
+    // Find the index of the subject in the testsubjects array
     // This is necessary to find all of the dependant data for the 
     // selected subject
-      let subjectindex = justtestsubjects.indexOf(dataset);
+      let subjectindex = testsubjects.indexOf(dataset);
     
     // Build arrays for the primary axes and labels for the bar plot.
       let sampvalues = justsamples[subjectindex].sample_values;
