@@ -69,7 +69,7 @@ function init() {
     Plotly.newPlot(CHART, chartData, layout);
     
     // Bubble Chart Code
-    
+
     var trace1 = {
       x: samples[0].otu_ids,
       y: samples[0].sample_values,
@@ -90,9 +90,9 @@ function init() {
     };
       Plotly.newPlot('bubble', data, layout);
   
-    //*************************************
-    // Populate the Demographic Data panel
-    //*************************************
+
+    // Create the Demographic Data panel
+    
       d3.select("#sample-metadata").append("p").text('ID: '+ metadata[0].id);
       d3.select("#sample-metadata").append("p").text('Ethnicity: '+ metadata[0].ethnicity);
       d3.select("#sample-metadata").append("p").text('Gender: '+ metadata[0].gender);
@@ -101,18 +101,15 @@ function init() {
       d3.select("#sample-metadata").append("p").text('Bbtype: '+ metadata[0].bbtype);
       d3.select("#sample-metadata").append("p").text('Wfreq: '+ metadata[0].wfreq);
     
-     //***********************************************
+      
      // Plot the Belly button washing Gauge chart 
-     //***********************************************
+     
        initGaugeChart();
     });
   };  
   // End of init() function
-  
-  
-  //***********************************************************
   // Call updatePlotly() when a change takes place to the DOM
-  //***********************************************************
+  
   
   d3.selectAll("body").on("change", updatePlotly);
   
