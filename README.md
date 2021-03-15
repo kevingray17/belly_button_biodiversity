@@ -5,4 +5,4 @@ In this assignment, I built an interactive dashboard to explore the [Belly Butto
 
 The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
 
-The project was deployed using Gihthub Pages and can be viewed at 
+The project was deployed using Gihthub Pages and can be viewed at https://kevingray17.github.io/belly_button_biodiversity/.
